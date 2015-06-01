@@ -12,6 +12,10 @@ public class PhishingScanner {
 
     PhishingScanner(){
         Phishingwords.add(0,"Invoice");
+        Phishingwords.add(1,"Post");
+        Phishingwords.add(2,"Label");
+        Phishingwords.add(3,"Document");
+        Phishingwords.add(4,"Postal");
     }
 
 
