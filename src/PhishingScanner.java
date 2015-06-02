@@ -65,11 +65,6 @@ public class PhishingScanner {
 
     public int Scan(String s, ArrayList<String> phishingwords,ArrayList<Integer> Ranking) {
        int Rank;
-        boolean phishingCheck=false;
-        while(phishingCheck==false){
-
-
-        }
         return Rank;
     }
 }

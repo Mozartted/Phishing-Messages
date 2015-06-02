@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f8de17c-1c9b-4ca9-af7d-34590bbb5ed3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileOpener.java" afterPath="$PROJECT_DIR$/src/FileOpener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PhishingScanner.java" afterPath="$PROJECT_DIR$/src/PhishingScanner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,8 +32,8 @@
       <file leaf-file-name="PhishingScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PhishingScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7795786" vertical-offset="760" max-vertical-offset="1377">
-              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.8071313" vertical-offset="641" max-vertical-offset="1292">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
               <folding>
                 <element signature="e#494#502#0" expanded="true" />
               </folding>
@@ -43,7 +44,7 @@
       <file leaf-file-name="FileOpener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="2312">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="2312">
               <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -392,13 +393,7 @@
       <option name="project" value="LOCAL" />
       <updated>1433263873382</updated>
     </task>
-    <task id="LOCAL-00007" summary="Building the Methods to handle the various words and rank them in order to determine if the file is phishing scam or not....">
-      <created>1433268330217</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1433268330217</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -486,7 +481,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="2312">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="2312">
           <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
@@ -497,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PhishingScanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7795786" vertical-offset="760" max-vertical-offset="1377">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.8071313" vertical-offset="641" max-vertical-offset="1292">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
           <folding>
             <element signature="e#494#502#0" expanded="true" />
           </folding>
