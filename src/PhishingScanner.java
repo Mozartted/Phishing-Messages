@@ -59,13 +59,12 @@ public class PhishingScanner {
         Ranking.add(17,1);
         Ranking.add(18,1);
         Ranking.add(19,1);
-
-
-
-
-
     }
 
+    //creating scanning method
+    public void Scanning(){
+
+    }
 
 
 

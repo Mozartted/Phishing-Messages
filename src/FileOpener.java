@@ -4,6 +4,7 @@
 import java.awt.*;
 import java.io.*; //opening the file chosen
 import java.awt.event.*;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.Scanner;
 import javax.swing.*;
 
@@ -19,6 +20,10 @@ public class FileOpener extends JFrame implements ActionListener {
     private MenuItem openFile=new MenuItem();
     private MenuItem Scan=new MenuItem();
     private MenuItem closeProgram=new MenuItem();
+
+    //temporary file to file temporary
+    BufferedWriter output;
+
 
     public FileOpener(){
         setSize(600,500);
@@ -54,6 +59,8 @@ public class FileOpener extends JFrame implements ActionListener {
         ScanButton.addActionListener(this);
         ScanButton.setVisible(true);;
         this.add(ScanButton);
+
+
     }//end constructor
 
     public void actionPerformed (ActionEvent event){
@@ -67,21 +74,30 @@ public class FileOpener extends JFrame implements ActionListener {
                 this.textArea.setText("");//clearing the screen
                 try{
                     Scanner OpenFIle=new Scanner(new FileReader(open.getSelectedFile().getPath()));
-                    while(OpenFIle.hasNext()){
-                        textArea.append(OpenFIle.nextLine());
-                    }
+                    File tempFile=new File("tempfile.txt");
+                    output=new BufferedWriter(new FileWriter(tempFile));
 
+                    while(OpenFIle.hasNext()){
+                        String nextLine=OpenFIle.nextLine();
+                        textArea.append(nextLine);
+                        output.write(nextLine);
+                    }
                 }catch(FileNotFoundException exceptionE){
                     JOptionPane.showMessageDialog(null, exceptionE.getMessage());
-
+                }catch (IOException exception){
+                    JOptionPane.showMessageDialog(null,String.format("Error processing file"));
                 }
 
             }
 
         }else if(event.getSource()==this.Scan||event.getSource()==this.ScanButton){
+            /*Calling a class from the Phishing Scanner class to use in Ranking each word
+            * and thus determine its ranking, this ranking is returned from the method and
+            * its added to the overall ranking used in the whole program to determine ranki-
+            * ng of the file.
+            * */
             
-
-        }else if(event.getSource()==this.closeProgram){
+          }else if(event.getSource()==this.closeProgram){
             this.dispose();
         }
     }
