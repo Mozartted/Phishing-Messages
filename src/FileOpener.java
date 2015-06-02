@@ -4,7 +4,6 @@
 import java.awt.*;
 import java.io.*; //opening the file chosen
 import java.awt.event.*;
-import java.nio.file.FileAlreadyExistsException;
 import java.util.Scanner;
 import javax.swing.*;
 
@@ -96,9 +95,36 @@ public class FileOpener extends JFrame implements ActionListener {
             * its added to the overall ranking used in the whole program to determine ranki-
             * ng of the file.
             * */
-            
+            try{
+             Scanner Scanning=new Scanner(new FileReader("tempfile.txt"));
+                int Rank=0;
+                while(Scanning.hasNext()){
+                    PhishingScanner newScan=new PhishingScanner();
+                   Rank=Rank+ newScan.Scan(Scanning.nextLine(),newScan.Phishingwords,newScan.Ranking);
+                }
+                String Likeness=LikelyHoodOfBeingPhishing(Rank);
+
+                JOptionPane.showMessageDialog(null,String.format("The File has a ranking of %d on the Phishing Scale"));
+            }catch(FileNotFoundException exception){
+                JOptionPane.showMessageDialog(null,String.format("Error Processing File...."));
+                dispose();
+            }
+
+
+
           }else if(event.getSource()==this.closeProgram){
             this.dispose();
         }
     }
+
+    public static String LikelyHoodOfBeingPhishing(int RankNo){
+        String message = null;
+       if(RankNo>15) message = String.format("The File is most likely a Phishing Scam");
+        if(RankNo>8&&RankNo<15)message=String.format("The File has a 50% chance of being a phishing Scam");
+        if(RankNo<8&&RankNo>4)message=String.format("the File has 20% chances of being a phishing Scam");
+        if(RankNo<4)message=String.format("the File is not a Phishing Scam");
+
+        return message;
+    }
+
 }

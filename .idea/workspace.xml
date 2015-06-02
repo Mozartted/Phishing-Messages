@@ -4,7 +4,6 @@
     <list default="true" id="5f8de17c-1c9b-4ca9-af7d-34590bbb5ed3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileOpener.java" afterPath="$PROJECT_DIR$/src/FileOpener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PhishingScanner.java" afterPath="$PROJECT_DIR$/src/PhishingScanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PhishingScanner-Making a difference.iws" />
@@ -30,21 +29,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PhishingScanner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PhishingScanner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PhishingScanner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="148" max-vertical-offset="1309">
-              <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.8071313" vertical-offset="641" max-vertical-offset="1292">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+              <folding>
+                <element signature="e#494#502#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileOpener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileOpener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6693679" vertical-offset="1253" max-vertical-offset="1870">
-              <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="2312">
+              <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -68,8 +69,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PhishingScanner.java" />
         <option value="$PROJECT_DIR$/src/FileOpener.java" />
+        <option value="$PROJECT_DIR$/src/PhishingScanner.java" />
       </list>
     </option>
   </component>
@@ -386,7 +387,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433258249550</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Building the Methods to handle the various words and rank them in order to determine if the file is phishing scam or not....">
+      <created>1433263873382</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1433263873382</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -441,7 +448,8 @@
     <MESSAGE value="Constructor initialization" />
     <MESSAGE value="Setting up the gui to open file" />
     <MESSAGE value="Gui Constructor Created with respective event handlers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gui Constructor Created with respective event handlers" />
+    <MESSAGE value="Building the Methods to handle the various words and rank them in order to determine if the file is phishing scam or not...." />
+    <option name="LAST_COMMIT_MESSAGE" value="Building the Methods to handle the various words and rank them in order to determine if the file is phishing scam or not...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -454,7 +462,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="1326">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#494#502#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,21 +479,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhishingScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1309">
-          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6693679" vertical-offset="1253" max-vertical-offset="1870">
-          <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1388" max-vertical-offset="2312">
+          <caret line="102" column="92" selection-start-line="102" selection-start-column="92" selection-end-line="102" selection-end-column="92" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PhishingScanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8071313" vertical-offset="641" max-vertical-offset="1292">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding>
+            <element signature="e#494#502#0" expanded="true" />
           </folding>
         </state>
       </provider>
