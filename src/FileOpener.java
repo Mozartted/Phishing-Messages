@@ -127,4 +127,11 @@ public class FileOpener extends JFrame implements ActionListener {
         return message;
     }
 
+    public static void main(String [] args){
+        FileOpener application=new FileOpener();
+        application.setVisible(true);
+        application.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+    }
+
 }

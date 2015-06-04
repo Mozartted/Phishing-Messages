@@ -64,10 +64,15 @@ public class PhishingScanner {
 
 
     public int Scan(String s, ArrayList<String> phishingwords,ArrayList<Integer> Ranking) {
-       int Rank;
+       int Rank = 0;
         boolean phishingCheck=false;
         while(phishingCheck==false){
-
+            for(int Count=0;Count<20;Count++){
+                if(phishingwords.get(Count)==s){
+                    Rank=Ranking.get(Count);
+                    phishingCheck=true;
+                }
+            }
 
         }
         return Rank;
