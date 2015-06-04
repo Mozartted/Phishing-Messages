@@ -106,12 +106,13 @@ public class FileOpener extends JFrame implements ActionListener {
             * */
 
             try{
-             Scanner Scanning=new Scanner(new FileReader("tempfile.txt"));
+             Scanner Scanning=new Scanner(new  FileReader("tempfile.txt"));
 
-                PhishingScanner newScan=new PhishingScanner();
+                boolean indicator=true;
+                PhishingScanner newScan=new PhishingScanner(indicator);
                 while(Scanning.hasNext()){
 
-                  Ranker=+ newScan.Scan(Scanning.nextLine(),newScan.Phishingwords,newScan.Ranking);
+                  Ranker=+ newScan.Scan(Scanning.next(),newScan.Phishingwords,newScan.Ranking);
                 }
                 String Likeness=LikelyHoodOfBeingPhishing(Ranker);
                 JOptionPane.showMessageDialog(null,String.format("The File has a ranking of %d on the Phishing Scale, %s",Ranker,Likeness));
@@ -121,12 +122,12 @@ public class FileOpener extends JFrame implements ActionListener {
             }catch(FileNotFoundException exception){
                 JOptionPane.showMessageDialog(null,String.format("Error Processing File...."));
                 dispose();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
 
-
-
-          }else if(event.getSource()==this.closeProgram){
+        }else if(event.getSource()==this.closeProgram){
             this.dispose();
         }
     }

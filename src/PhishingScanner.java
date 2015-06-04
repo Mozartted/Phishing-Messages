@@ -10,7 +10,9 @@ public class PhishingScanner {
     ArrayList <String> Phishingwords=new ArrayList<String>();
     ArrayList<Integer>Ranking=new ArrayList<Integer>();
 
-    PhishingScanner(){
+    private int Rank;
+
+    PhishingScanner(boolean indicator){
         //initializing the various array elements in Phishingwords
         Phishingwords.add(0,"Invoice");
         Phishingwords.add(1,"Post");
@@ -64,16 +66,10 @@ public class PhishingScanner {
 
 
     public int Scan(String s, ArrayList<String> phishingwords,ArrayList<Integer> Ranking) {
-       int Rank = 0;
-        boolean phishingCheck=false;
-        while(phishingCheck==false){
             for(int Count=0;Count<20;Count++){
                 if(phishingwords.get(Count).equalsIgnoreCase(s)){
                     Rank=Ranking.get(Count);
-                    phishingCheck=true;
                 }
-            }
-
         }
         return Rank;
     }
