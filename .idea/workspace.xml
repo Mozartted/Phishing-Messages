@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f8de17c-1c9b-4ca9-af7d-34590bbb5ed3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FileOpener.java" afterPath="$PROJECT_DIR$/src/FileOpener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PhishingScanner.java" afterPath="$PROJECT_DIR$/src/PhishingScanner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PhishingScanner-Making a difference.iws" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="FileOpener.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36875" vertical-offset="1769" max-vertical-offset="2703">
-              <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
+            <state vertical-scroll-proportion="0.66875" vertical-offset="1282" max-vertical-offset="2720">
+              <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -80,8 +79,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/FileOpener.java" />
         <option value="$PROJECT_DIR$/src/PhishingScanner.java" />
+        <option value="$PROJECT_DIR$/src/FileOpener.java" />
       </list>
     </option>
   </component>
@@ -449,7 +448,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433385138853</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Debugged and Working...still subject to modification">
+      <created>1433421178444</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1433421178444</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -533,7 +538,8 @@
     <MESSAGE value="Building the Methods to handle the various words and rank them in order to determine if the file is phishing scam or not...." />
     <MESSAGE value="Completef the Scanner class and comlete implemented main method(for execution of program&#10;)" />
     <MESSAGE value="Debugging and fixes...quite a few" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging and fixes...quite a few" />
+    <MESSAGE value="Debugged and Working...still subject to modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugged and Working...still subject to modification" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -633,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FileOpener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36875" vertical-offset="1769" max-vertical-offset="2703">
-          <caret line="111" column="71" selection-start-line="111" selection-start-column="71" selection-end-line="111" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.66875" vertical-offset="1282" max-vertical-offset="2720">
+          <caret line="88" column="66" selection-start-line="88" selection-start-column="66" selection-end-line="88" selection-end-column="66" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

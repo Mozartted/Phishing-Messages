@@ -81,12 +81,13 @@ public class FileOpener extends JFrame implements ActionListener {
             if(Option==JFileChooser.APPROVE_OPTION){
                 this.textArea.setText("");//clearing the screen
                 try{
-                    Scanner OpenFIle=new Scanner(new FileReader(open.getSelectedFile().getPath()));
+                    Scanner OpenFile=new Scanner(new FileReader(open.getSelectedFile().getPath()));
                     File tempFile=new File("tempfile.txt");
                     output=new PrintStream(tempFile);
 
-                    while(OpenFIle.hasNext()){
-                        String nextLine=OpenFIle.nextLine();
+                    while(OpenFile.hasNext()){
+                        textArea.setText("");//to clear the Screen
+                        String nextLine=OpenFile.nextLine();
                         textArea.append(nextLine);
                         output.print(nextLine);
                     }
