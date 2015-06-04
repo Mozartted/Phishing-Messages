@@ -68,7 +68,7 @@ public class PhishingScanner {
         boolean phishingCheck=false;
         while(phishingCheck==false){
             for(int Count=0;Count<20;Count++){
-                if(phishingwords.get(Count)==s){
+                if(phishingwords.get(Count).equalsIgnoreCase(s)){
                     Rank=Ranking.get(Count);
                     phishingCheck=true;
                 }

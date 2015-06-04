@@ -1,6 +1,8 @@
 /**
  * Created by Moz on 6/1/2015.
  */
+import com.sun.xml.internal.stream.writers.UTF8OutputStreamWriter;
+
 import java.awt.*;
 import java.io.*; //opening the file chosen
 import java.awt.event.*;
@@ -14,6 +16,9 @@ public class FileOpener extends JFrame implements ActionListener {
     private JButton ScanButton=new JButton();
     private MenuBar menubar=new MenuBar();
 
+    //adding a layout class
+    private FlowLayout layout=new FlowLayout();
+
     //items in the menu bar
     private Menu file=new Menu();
     private MenuItem openFile=new MenuItem();
@@ -21,14 +26,16 @@ public class FileOpener extends JFrame implements ActionListener {
     private MenuItem closeProgram=new MenuItem();
 
     //temporary file to file temporary
-    BufferedWriter output;
+     PrintStream output;
+    private int Ranker;
 
 
     public FileOpener(){
         setSize(600,500);
         setTitle("Phishing Scanner");
-        textArea.setFont(new Font("Arial",Font.ITALIC,15));
+        textArea.setFont(new Font("Arial",Font.PLAIN,15));
         getContentPane().add(textArea);
+        this.setLayout(layout);
 
         //creating menu
         setMenuBar(menubar);
@@ -55,9 +62,11 @@ public class FileOpener extends JFrame implements ActionListener {
 
         //adding button
         ScanButton.setText("Scan File");
+        ScanButton.setSize(14, 3);
         ScanButton.addActionListener(this);
-        ScanButton.setVisible(true);;
+        ScanButton.setVisible(true);
         this.add(ScanButton);
+
 
 
     }//end constructor
@@ -74,12 +83,12 @@ public class FileOpener extends JFrame implements ActionListener {
                 try{
                     Scanner OpenFIle=new Scanner(new FileReader(open.getSelectedFile().getPath()));
                     File tempFile=new File("tempfile.txt");
-                    output=new BufferedWriter(new FileWriter(tempFile));
+                    output=new PrintStream(tempFile);
 
                     while(OpenFIle.hasNext()){
                         String nextLine=OpenFIle.nextLine();
                         textArea.append(nextLine);
-                        output.write(nextLine);
+                        output.print(nextLine);
                     }
                 }catch(FileNotFoundException exceptionE){
                     JOptionPane.showMessageDialog(null, exceptionE.getMessage());
@@ -95,20 +104,25 @@ public class FileOpener extends JFrame implements ActionListener {
             * its added to the overall ranking used in the whole program to determine ranki-
             * ng of the file.
             * */
+
             try{
              Scanner Scanning=new Scanner(new FileReader("tempfile.txt"));
-                int Rank=0;
-                while(Scanning.hasNext()){
-                    PhishingScanner newScan=new PhishingScanner();
-                   Rank=Rank+ newScan.Scan(Scanning.nextLine(),newScan.Phishingwords,newScan.Ranking);
-                }
-                String Likeness=LikelyHoodOfBeingPhishing(Rank);
 
-                JOptionPane.showMessageDialog(null,String.format("The File has a ranking of %d on the Phishing Scale"));
+                PhishingScanner newScan=new PhishingScanner();
+                while(Scanning.hasNext()){
+
+                  Ranker=+ newScan.Scan(Scanning.nextLine(),newScan.Phishingwords,newScan.Ranking);
+                }
+                String Likeness=LikelyHoodOfBeingPhishing(Ranker);
+                JOptionPane.showMessageDialog(null,String.format("The File has a ranking of %d on the Phishing Scale, %s",Ranker,Likeness));
+
+
+
             }catch(FileNotFoundException exception){
                 JOptionPane.showMessageDialog(null,String.format("Error Processing File...."));
                 dispose();
             }
+
 
 
 
@@ -130,8 +144,9 @@ public class FileOpener extends JFrame implements ActionListener {
     public static void main(String [] args){
         FileOpener application=new FileOpener();
         application.setVisible(true);
+        application.setSize(600,300);
         application.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+
     }
 
 }
